@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="module" defer src="script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet"/>
+    <title>QuizTime</title>
+  </head>
+  <body>
+    <h1 id="h1Elem">QuizMANIA</h1>
+    <p id="pElem"></p>
+
+    <div id="startContainer">
+      <button id="localQuizBtn">Start Football Quiz!</button>
+      <button id="apiQuizBtn">Start Randomized Quiz!</button>
+    </div>
+    <div id="quizContainer" style="display: none">
+      <h2 id="htmlQuestion"></h2>
+      <div id="buttonHTML"></div>
+    </div>
+    <div id="buttonContainer" style="display: flex; justify-content: center">
+      <button id="sportsNextBtn" style="display: none">Next</button>
+      <button id="resetQuizBtn" style="display: none">Reset</button>
+    </div>
+  </body>
+</html>

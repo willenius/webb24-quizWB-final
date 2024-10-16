@@ -1,0 +1,275 @@
+* {
+  background-color: #C96868;
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+body {
+  border: 7px solid black;
+  border-radius: 13px;
+  max-width: 60%;
+  max-height: 60%;
+  margin: 70px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* "hemsidan/start-page" */
+#startContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 8px;
+}
+/* frågorna */
+#localQuizBtn,
+#apiQuizBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  color: white;
+  border-radius: 13px;
+  width: 80%;
+  height: auto;
+  padding: 10px;
+  max-width: 300px;
+}
+
+/* Här är H1, QUIZFRÅGAN OCH paragraph */
+#h1Elem,
+#pElem,
+#htmlQuestion {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  start-container knapparna, (HOMEPAGE)*/
+#startContainer button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+/* om RÄTT, ska grön */
+.correct {
+  animation: correct 0.7s;
+  background-color: rgb(4, 173, 4);
+}
+
+/* om FEL, ska vara röd */
+.incorrect {
+  background-color: rgb(194, 52, 52);
+}
+
+@keyframes correct {
+  0% {
+    transform: translateX(0)
+  }
+
+  25% {
+    transform: translateX(5px)
+  }
+
+  50% {
+    transform: translateX(-5px)
+  }
+
+  75% {
+    transform: translateX(5px)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
+}
+
+/* main för frågorna, classägaren. här sätter vi flexen */
+#buttonHTML {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* HÄR LAGRAS FRÅGORNA */
+.quizHolderBtn {
+  font-size: 1rem;
+  font-weight: 900;
+  width: 60%;
+  border: 2px solid black;
+  border-radius: 13px;
+  padding: 10px;
+  margin-top: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* container för knapparna */
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+}
+
+/* min next knapp, hittade en snygg animation för "next" att komma in */
+#sportsNextBtn {
+  border: 2px solid black;
+  border-radius: 13px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 150px;
+  font-size: 1.5rem;
+  position: relative;
+  animation: my_animationNextBtn 1s;
+  animation-fill-mode: both;
+}
+
+/* reset, egentligen samma som "next" */
+#resetQuizBtn {
+  border-radius: 13px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 150px;
+  font-size: 1.5rem;
+  position: relative;
+  animation: my_animationNextBtn 0.3s;
+  animation-fill-mode: both;
+}
+
+button:hover {
+  transition: 0.1s;
+}
+
+/* satt och letade efter en animation och stötte på denna. */
+@keyframes my_animationNextBtn {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+
+  #sportsNextBtn,
+  #quizContainer,
+  .startContainer,
+  #localQuizBtn,
+  #buttonHTML {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .quizHolderBtn {
+    font-size: 0.9rem;
+    width: 80%;
+    padding: 8px;
+    white-space: normal;
+    word-wrap: break-word;
+    /* bryter långa ord & meningar */
+    margin-top: 20px;
+  }
+
+  #buttonContainer {
+    padding-top: 10px;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #htmlQuestion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1rem;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  /* ta bort header + p element helt vid sub 768px. ser lite bulkigt ut annars */
+  #pElem,
+  #h1Elem {
+    display: none;
+    /* Döljer p-elementet och h1-elementet */
+  }
+
+  #sportsNextBtn,
+  #resetQuizBtn {
+    padding: 3px 8px;
+    font-size: 0.8rem;
+    width: auto;
+  }
+
+  #startContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 900;
+    padding: 3px 8px;
+    font-size: 0.8rem;
+    width: auto;
+  }
+
+  #localQuizBtn,
+  #apiQuizBtn {
+    font-size: 9px !important;
+    height: auto;
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+  }
+}
+
+/* för att ta bort cursorn, dvs inte kunna klicka på knappar */
+button:disabled {
+  cursor: no-drop;
+}
+
+button:hover:not([disabled]) {
+  background-color: black;
+  color: white;
+}
+
+button, a {
+  outline: none;
+}
+
+button, a {
+  text-decoration: none;
+  color: inherit;
+}
+
