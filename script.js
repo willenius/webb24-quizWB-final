@@ -1,7 +1,7 @@
 import { quizQuestions } from "./module.js";
 //console.log(quizQuestions); just wanted to confirm that the module worked
 
-//import all my html el using DOM
+//import all my html el using DOM.
 const htmlQuestion = document.getElementById("htmlQuestion");
 const h1Elem = document.getElementById("h1Elem");
 
@@ -19,14 +19,14 @@ let sportsQuizScore = 0;
 let questions = [];
 let usedQuestions = [];
 
-// Funktion för att hämta en slumpmässig fråga som inte har använts. 
+//funktion för att hämta en slumpmässig fråga som inte har använts. 
 function randomQuestion() {
     let randomIndex;
     do {
         randomIndex = Math.floor(Math.random() * questions.length);
     } while (usedQuestions.includes(randomIndex) && usedQuestions.length < questions.length);
 
-    // Lägg till indexet i usedQuestions för att hålla koll på vilka som använts
+    // Lägg till indexet i usedQuestions för att hålla koll på vilka frågor som blivit besvarade.
     usedQuestions.push(randomIndex);
 
     return questions[randomIndex];
@@ -154,6 +154,7 @@ apiQuizBtn.addEventListener('click', () => {
     sportsQuiz(false);  //api questions
 });
 
+//resetQuiz btn, it reloads the page.
 resetQuizBtn.addEventListener('click', resetQuiz);
 function resetQuiz() {
     let currentQuestionIndex = 0;
