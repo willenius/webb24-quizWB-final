@@ -40,9 +40,9 @@ export const quizQuestions = [
         correctAnswer: "Romelu Lukaku",
     },
     {
-    question: "Which football player once set off fireworks in his own bathroom?",
-    options: ["Paul Pogba", "Mario Balotelli", "Kylian Mbappe", "Zlatan Ibrahimović"],
-    correctAnswer: "Mario Balotelli"
+        question: "Which football player once set off fireworks in his own bathroom?",
+        options: ["Paul Pogba", "Mario Balotelli", "Kylian Mbappe", "Zlatan Ibrahimović"],
+        correctAnswer: "Mario Balotelli"
     },
 
     {
