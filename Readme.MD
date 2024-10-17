@@ -1,0 +1,2 @@
+//first project implementing javascript with html & css.
+stumbled on lots of issues and lots of time spent googling everything from specific event listeners to media queries. satisfaction 10/10 when it worked as intended.
